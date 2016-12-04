@@ -3,6 +3,10 @@ A blank solution was created called RGC2020MVC, with 'Create new Git Repository'
 Added to this new solution was a new ASP.NET Web Application (.NET Framework) using MVC template called RGC2020MVC.WebUI
 A Windows class library type project called RGC2020MVC.DAL was added to the solution, for the Data Access Layer
 A Windows class library type project called RGC2020MVC.Model was also added to the solution, to hold the Model classes.
+The WebUI project needed to have the reference added to both the DAL and Model projects, with the DAL project having a reference 
+to the Model project being added. This makes the DAL and Model namespaces available to the WebUI project.
+Build dependancies were also set with the DAL project being dependant on the Model project, and the WebUI project being 
+dependancy on both the DAL and Model projects.                                                                                                                                
 
 The solution was then uploaded to GitHub as follows:-
 When the solution was initially created, the option 'Create new Git Repository' was checked which then allows us to use
@@ -52,7 +56,9 @@ before removing the unwanted migration files.
 The Package Manager Console is used initially so much that it is worth creating a keyboard short cut to it, as follows:-
 Tools->Options->Environment->Keyboard. Search for PackageManagerConsole. In the 'Press shortcut keys' box, enter Alt+/ and Alt+.
 This will show the package manager console when the Alt key is held down while slash and dot are pressed.
-This key combination doesn't conflict with other key combinations
+This key combination doesn't conflict with other key combinations.
+
+
 
 ## Using GIT ##
 To push changes from your local machine to the online remote repository, use the Windows app. Click the Changes button and give a
@@ -66,5 +72,20 @@ Git fetch downloads the latest from remote without trying to merge or rebase any
 Then the git reset resets the master branch to what you just fetched. 
 The --hard option changes all the files in your working tree to match the files in origin/master
 
+
+### Data Access Layer (DAL) and Repositories ###
+In order to provide a layer of extraction between the application and the data models, we have a project call RGC2020MVC.DAL
+To create the base repository and repositories for each data model, we must first added the Entity framwork to the DAL project
+using the NuGet Package Manager. We also need to add references to System.Data, System.Data.DataSetExtensions, System.Data.Entity.
+A reference to RGC2020MVC.Model is also required by the DAL project.
+We created a class called DataContext which is subclassed from DbContext (System.Data.Entity.DbContext), which takes in the base class 
+default database connection as a parameter. We also create DbSet<> properties of model entity, so the context knows about them.
+
+
+
+### Models ####
+New Class type files were added to the Model project, each representing a table in the database. 
+Each class had the properties added of each field in the table. Data annotations were also added which required
+the System.ComponentModel.DataAnnotations reference to be added to the project.
 
 

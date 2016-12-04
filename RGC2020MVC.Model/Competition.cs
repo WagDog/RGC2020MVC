@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RGC2020MVC.Model
 {
-    class Competition
+    public class Competition
     {
+        public int Id { get; set; }
     }
 }

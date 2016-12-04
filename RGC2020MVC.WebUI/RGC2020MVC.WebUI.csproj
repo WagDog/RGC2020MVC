@@ -201,6 +201,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612042028370_AddInitialIdentityTables.cs" />
+    <Compile Include="Migrations\201612042028370_AddInitialIdentityTables.Designer.cs">
+      <DependentUpon>201612042028370_AddInitialIdentityTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612042039555_AddTableAccount.cs" />
+    <Compile Include="Migrations\201612042039555_AddTableAccount.Designer.cs">
+      <DependentUpon>201612042039555_AddTableAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -278,6 +286,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RGC2020MVC.DAL\RGC2020MVC.DAL.csproj">
+      <Project>{b1a5e0af-d712-498d-ad25-a06b9dd520a5}</Project>
+      <Name>RGC2020MVC.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RGC2020MVC.Model\RGC2020MVC.Model.csproj">
+      <Project>{f5d585bb-35a8-43f4-bd24-65d27b4f7054}</Project>
+      <Name>RGC2020MVC.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612042028370_AddInitialIdentityTables.resx">
+      <DependentUpon>201612042028370_AddInitialIdentityTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612042039555_AddTableAccount.resx">
+      <DependentUpon>201612042039555_AddTableAccount.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

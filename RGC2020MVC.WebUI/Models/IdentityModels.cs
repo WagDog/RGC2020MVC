@@ -1,8 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using RGC2020MVC.Model;
+using RGC2020MVC.WebUI.Controllers;
 
 namespace RGC2020MVC.WebUI.Models
 {
@@ -20,6 +23,11 @@ namespace RGC2020MVC.WebUI.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        // Add properties for each model to be included in the migrations
+        public DbSet<Account> Accounts { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
