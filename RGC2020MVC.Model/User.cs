@@ -11,6 +11,7 @@ namespace RGC2020MVC.Model
 {
     public class User
     {
+        [Key]
         [Required]
         public int Id { get; set; }
 

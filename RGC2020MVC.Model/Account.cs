@@ -36,11 +36,11 @@ namespace RGC2020MVC.Model
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Created At")]
+        [Display(Name = "Date Created")]
         public DateTime CreatedAt { get; set; }
 
         [Required]
-        [Display(Name = "Updated At")]
+        [Display(Name = "Date Updated")]
         public DateTime UpdatedAt { get; set; }
 
 

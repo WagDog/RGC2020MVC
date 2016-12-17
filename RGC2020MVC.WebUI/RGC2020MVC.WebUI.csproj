@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201612042039555_AddTableAccount.Designer.cs">
       <DependentUpon>201612042039555_AddTableAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612172107467_AddBulkInsertCompetitionCompetitionTypesScoreUsers.cs" />
+    <Compile Include="Migrations\201612172107467_AddBulkInsertCompetitionCompetitionTypesScoreUsers.Designer.cs">
+      <DependentUpon>201612172107467_AddBulkInsertCompetitionCompetitionTypesScoreUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -303,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612042039555_AddTableAccount.resx">
       <DependentUpon>201612042039555_AddTableAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612172107467_AddBulkInsertCompetitionCompetitionTypesScoreUsers.resx">
+      <DependentUpon>201612172107467_AddBulkInsertCompetitionCompetitionTypesScoreUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

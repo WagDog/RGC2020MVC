@@ -26,7 +26,11 @@ namespace RGC2020MVC.WebUI.Models
 
         // Add properties for each model to be included in the migrations
         public DbSet<Account> Accounts { get; set; }
-
+        public DbSet<BulkInsert> BulkInserts { get; set; }
+        public DbSet<Competition> Competitions { get; set; }
+        public DbSet<CompetitionType> CompetitionTypes { get; set; }
+        public DbSet<Score> Scores { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
