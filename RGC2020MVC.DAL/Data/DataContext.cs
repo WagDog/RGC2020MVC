@@ -13,6 +13,10 @@ namespace RGC2020MVC.DAL.Data
 
         // Any entity to be persisted must be declared here
         public DbSet<Account> Accounts { get; set; }
+
+        public System.Data.Entity.DbSet<RGC2020MVC.Model.Competition> Competitions { get; set; }
+
+        public System.Data.Entity.DbSet<RGC2020MVC.Model.CompetitionType> CompetitionTypes { get; set; }
     }
 
 
